@@ -1,0 +1,96 @@
+.hero {
+  .container {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__text {
+    font-family: "Be Vietnam", sans-serif;
+
+    max-width: 25rem;
+    @include breakpoint-dowm(medium) {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    @include breakpoint-dowm(small) {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+
+      text-align: center;
+      margin-top: -5rem;
+      max-width: 35rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: $darkBlue;
+      font-weight: 700;
+      font-family: "Be Vietnam", sans-serif;
+
+      @include breakpoint-dowm(medium) {
+        font-size: 2rem;
+      }
+      @include breakpoint-dowm(small) {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+      }
+    }
+
+    p {
+      line-height: 1.7;
+      color: $darkGrayishBlue;
+      font-family: "Be Vietnam", sans-serif;
+
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      @include breakpoint-dowm(medium) {
+        font-size: 0.9rem;
+      }
+      @include breakpoint-dowm(small) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__image {
+    background-image: url("illustration-intro.svg");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include breakpoint-up(large) {
+      order: 2;
+      min-height: 30rem;
+      margin-right: -3rem;
+    }
+    @include breakpoint-dowm(medium) {
+      order: 2;
+      background-size: contain;
+      min-height: 25rem;
+      background-size: contain;
+    }
+    @include breakpoint-dowm(small) {
+      min-height: 25rem;
+
+      background-position: center center;
+      //   margin-bottom: 6rem;
+      margin-top: -6rem;
+      margin-right: -1.5rem;
+    }
+  }
+
+  &__cta {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    @include breakpoint-dowm(medium) {
+    }
+  }
+}

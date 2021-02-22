@@ -1,0 +1,28 @@
+@media (min-width: 64em) {
+  //styles here
+}
+//640px, 1024px, 1400px for screen sizes of these and above...when you're increassing the size of screen
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+//639px, 1023px, 1399px for screen sizes of these below...when you're reducing the size of screen
+$breakpoints-down: (
+  "small": "39.9375em",
+  "medium": "63.9375em",
+  "xlarge": "86.4375em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-dowm($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

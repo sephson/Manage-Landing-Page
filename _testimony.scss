@@ -1,0 +1,39 @@
+.testimony {
+  &__header {
+    color: $darkBlue;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 4rem 0;
+  }
+  &__individual {
+    background-color: $veryLightGray;
+    max-width: 29rem;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 5rem;
+    display: table-footer-group;
+    border-radius: 1rem;
+  }
+
+  &__image {
+    width: 4rem !important;
+    // margin-bottom: 4rem;
+    // padding-bottom: 4rem;
+    // position: relative;
+    // z-index: 1;
+    // top: -1.7rem;
+  }
+
+  &__name {
+    color: $darkBlue;
+  }
+
+  &__para {
+    color: $darkGrayishBlue;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 1rem;
+  }
+}

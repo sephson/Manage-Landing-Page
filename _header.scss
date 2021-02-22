@@ -1,0 +1,109 @@
+.header {
+  &.open {
+    .overlay {
+      display: block;
+      visibility: visible;
+      animation: fade-in 300ms ease-in-out;
+    }
+
+    .header__menu {
+      position: relative;
+      span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:last-child {
+        transform: rotate(-45deg) translate(7px, -8px);
+      }
+    }
+  }
+
+  nav {
+    position: relative;
+    padding-top: 0.7rem;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+
+  &__links {
+    &:hover {
+      color: $darkGrayishBlue;
+    }
+    a {
+      color: $veryDarkBlue;
+      text-decoration: none;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+
+      a:hover {
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__logo {
+    @include breakpoint-dowm(medium) {
+      padding-left: 2rem;
+      padding-top: 1rem;
+    }
+  }
+
+  &__menu {
+    > span {
+      display: block;
+      width: 1.9rem;
+      border-radius: 3px;
+      height: 4px;
+      background-color: $darkBlue;
+      margin-top: 5px;
+      margin-right: 2rem;
+      transition: 0.6s;
+    }
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, $veryDarkOverlayBlue);
+  }
+
+  &__mobile {
+    position: absolute;
+    background-color: $veryLightGray;
+    border-radius: 0.5rem;
+    padding: 1.625rem;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    top: 130%;
+    display: block;
+
+    a {
+      display: block;
+      color: $darkBlue;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.625rem;
+      font-weight: 700;
+    }
+  }
+
+  &__cta {
+    font-weight: 700;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}

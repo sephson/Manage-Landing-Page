@@ -1,0 +1,75 @@
+.makemove {
+  background-color: $brightRed;
+  margin-top: 5rem;
+
+  @include breakpoint-dowm(small) {
+    height: 62vh;
+  }
+
+  @include breakpoint-dowm(medium) {
+    margin: 0 auto;
+  }
+
+  @include breakpoint-dowm(large) {
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoint-dowm(small) {
+      display: block;
+    }
+  }
+  &__anklelink {
+    color: $brightRed;
+    font-size: 1rem;
+    padding: 1rem;
+
+    background-color: white;
+    border-radius: 3rem;
+    font-weight: 700;
+    width: 10rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-top: 4rem;
+
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.521);
+    }
+
+    @include breakpoint-dowm(small) {
+      padding-bottom: 2rem;
+      margin: auto;
+    }
+    @include breakpoint-dowm(medium) {
+      margin: auto;
+    }
+
+    @include breakpoint-dowm(large) {
+    }
+  }
+
+  &__header {
+    color: white;
+    font-size: 2.5rem;
+    max-width: 25rem;
+    text-align: left;
+
+    @include breakpoint-dowm(medium) {
+      margin: auto;
+      text-align: center;
+      padding: 2rem;
+      max-width: 30rem;
+    }
+    @include breakpoint-dowm(small) {
+      //   margin-left: 2rem;
+      text-align: center;
+
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+  }
+}

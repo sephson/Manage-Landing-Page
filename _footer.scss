@@ -1,0 +1,160 @@
+.footer {
+  background-color: $veryDarkBlue;
+  padding-top: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  // max-width: 60rem;
+
+  @include breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo links1 links2 input"
+      "social links1 links2 input";
+  }
+
+  @media (max-width: 40rem) {
+    text-align: center;
+  }
+
+  @media (max-width: 70rem) {
+    display: block;
+    text-align: center;
+  }
+  &__links {
+    > a {
+      text-decoration: none;
+      color: $veryLightGray;
+      padding: 0.5rem;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+
+    padding-top: 6rem;
+
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+    @media (max-width: 40rem) {
+      padding: 3rem 0;
+      size: 4rem;
+    }
+    @media (max-width: 75rem) {
+      padding: 1rem 0;
+      height: 2.5rem;
+    }
+  }
+
+  &__social {
+    display: block;
+    a {
+      margin-bottom: 1rem;
+      margin-right: 0.5rem;
+      @include breakpoint-dowm(small) {
+        text-align: center;
+      }
+    }
+    > img {
+      height: 1.5rem;
+      padding: 1.875rem 0;
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+    @media (max-width: 40rem) {
+      padding: 1rem 0;
+      height: 2.5rem;
+    }
+
+    @media (max-width: 70rem) {
+      padding: 1rem 0;
+      height: 2.5rem;
+    }
+  }
+
+  &__links {
+    // display: block;
+
+    a {
+      // @include breakpoint-dowm(small) {
+      //   text-align: center;
+      // }
+    }
+    .col1 {
+      @include breakpoint-up(large) {
+        grid-area: links1;
+        display: inline-block;
+      }
+    }
+
+    .col2 {
+      @include breakpoint-up(large) {
+        grid-area: links2;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__input {
+    // padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include breakpoint-dowm(medium) {
+      display: none;
+    }
+
+    @include breakpoint-dowm(small) {
+      display: none;
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: input;
+    }
+
+    &__field {
+      border-radius: 2rem;
+      height: 3rem;
+      padding: 1.5rem;
+      width: auto;
+      color: $darkGrayishBlue;
+      @media (max-width: 40rem) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__go {
+      color: $veryLightGray;
+      background-color: $brightRed;
+      width: 4.5rem;
+      height: 3.3rem;
+      text-align: center;
+      border-radius: 2rem;
+      padding-top: 0.95rem;
+      margin-left: 1rem;
+      @media (max-width: 40rem) {
+      }
+    }
+  }
+
+  &__copyright {
+    color: $darkGrayishBlue;
+
+    @include breakpoint-up(large) {
+      grid-area: input;
+      font-size: 0.8rem;
+      padding-top: 6rem;
+    }
+
+    @media (max-width: 70rem) {
+      text-align: center;
+      margin: auto;
+    }
+  }
+}

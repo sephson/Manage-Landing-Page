@@ -1,0 +1,79 @@
+.about {
+  @include breakpoint-dowm(medium) {
+    margin-top: -5rem;
+  }
+  //
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+    @include breakpoint-dowm(medium) {
+      padding: 0 2.5rem;
+    }
+
+    @include breakpoint-dowm(small) {
+      display: block;
+      padding: 0 2.2rem;
+    }
+  }
+
+  &__title {
+    display: flex;
+    @include breakpoint-dowm(medium) {
+      display: block;
+    }
+    @include breakpoint-dowm(small) {
+      display: block;
+    }
+  }
+
+  &__number {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    background-color: $brightRed;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-top: 1.32rem;
+    @include breakpoint-dowm(small) {
+      margin: auto;
+    }
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: $darkBlue;
+    margin-top: 1rem;
+    @include breakpoint-dowm(small) {
+      text-align: center;
+      margin-top: 4rem;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $darkBlue;
+    margin-left: 1.2rem;
+    @include breakpoint-dowm(small) {
+      text-align: center;
+      margin-left: 0;
+    }
+    @include breakpoint-dowm(medium) {
+      margin-left: 0;
+    }
+  }
+
+  p {
+    color: $darkGrayishBlue;
+    font-size: 1rem;
+    line-height: 1.7;
+    @include breakpoint-dowm(small) {
+      text-align: center;
+    }
+  }
+}
