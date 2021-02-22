@@ -519,6 +519,13 @@ a:hover {
   }
 }
 
+.testimony {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+}
+
 .testimony__header {
   color: #242d52;
   font-size: 1.5rem;

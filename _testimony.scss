@@ -1,4 +1,6 @@
 .testimony {
+  display: grid;
+  grid-template-columns: repeat (4, 1fr);
   &__header {
     color: $darkBlue;
     font-size: 1.5rem;
